@@ -29,10 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header title={photo.title} date={photo.date} />
+      <Header title={photo.title} />
+      <DatePicker date={date} setDate={setDate} />
       <Preamble text={photo.explanation} />
       <Content title={photo.title} type={photo.media_type} url={photo.url} />
-      <DatePicker date={date} setDate={setDate} />
     </div>
   );
 }
