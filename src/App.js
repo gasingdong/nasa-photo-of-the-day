@@ -4,7 +4,6 @@ import axios from 'axios';
 import Header from './header/Header';
 import Preamble from './preamble/Preamble';
 import Content from './content/Content';
-import DatePicker from './date-picker/DatePicker';
 
 function App() {
   const apiKey = '251h2uaJvdQrHzVG2pxwAUU2SXUoX1OIPxqI7F58';
@@ -29,8 +28,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header title={photo.title} />
-      <DatePicker date={date} setDate={setDate} />
+      <Header title={photo.title} date={date} setDate={setDate} />
       <Preamble text={photo.explanation} />
       <Content title={photo.title} type={photo.media_type} url={photo.url} />
     </div>

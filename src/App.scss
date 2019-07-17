@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import './header/Header';
+@import './date-picker/DatePicker';
 
 .app {
   background-color: $app-bg;
