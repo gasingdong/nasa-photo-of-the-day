@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./header/Header";
+import Preamble from "./preamble/Preamble";
 
 function App() {
   const apiKey = "251h2uaJvdQrHzVG2pxwAUU2SXUoX1OIPxqI7F58";
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header title={photo.title} date={photo.date}/>
+      <Preamble text={photo.explanation}/>
     </div>
   );
 }
