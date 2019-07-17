@@ -21,6 +21,9 @@ function App() {
           setPhoto(res.data);
           setCache(cache => ({...cache, [date]: res.data}));
           console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
         });
     }
   }, [cache, date]);
