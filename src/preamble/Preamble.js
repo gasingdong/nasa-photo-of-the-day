@@ -2,8 +2,8 @@ import React from 'react';
 
 function Preamble({ text }) {
   return (
-    <section className="preamble">
-      <div>
+    <section>
+      <div className="preamble">
         <p>{text}</p>
       </div>
     </section>

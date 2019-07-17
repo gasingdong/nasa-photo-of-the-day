@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Header from "./header/Header";
 import Preamble from "./preamble/Preamble";
+import Content from "./content/Content";
 
 function App() {
   const apiKey = "251h2uaJvdQrHzVG2pxwAUU2SXUoX1OIPxqI7F58";
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <Header title={photo.title} date={photo.date}/>
       <Preamble text={photo.explanation}/>
+      <Content title={photo.title} type={photo.media_type} url={photo.url}/>
     </div>
   );
 }
