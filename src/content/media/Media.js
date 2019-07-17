@@ -5,14 +5,14 @@ function Media({ title, type, url }) {
   if (type === "video") {
     return (
       <div className="media">
-        <iframe title={title} width="420" height="315" src={url}>
+        <iframe width="500" height="300"title={title} src={url}>
         </iframe> 
       </div>
     );
   } else {
     return (
       <div className="media">
-        <img src={url} alt={title}></img>
+        <img width="500" src={url} alt={title}></img>
       </div>
     );
   }
