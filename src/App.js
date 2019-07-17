@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './App.scss';
 import axios from 'axios';
 import Header from './header/Header';
 import Preamble from './preamble/Preamble';
@@ -28,7 +28,7 @@ function App() {
   }, [cache, date]);
 
   return (
-    <div className="App">
+    <div className="app">
       <Header title={photo.title} />
       <DatePicker date={date} setDate={setDate} />
       <Preamble text={photo.explanation} />

@@ -4,7 +4,7 @@ function DatePicker({ date, setDate }) {
   return (
     <section>
       <div className="date-picker">
-        <input type="date" defaultValue={new Date().toLocaleDateString('en-CA')} onInput={event => {
+        <input type="date" defaultValue={date} onInput={event => {
             setDate(event.target.value);
           }
         }></input>

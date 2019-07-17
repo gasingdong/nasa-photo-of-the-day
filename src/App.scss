@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+@import './header/Header';
+
+.app {
+  background-color: $app-bg;
+  width: 80%;
+  max-width: 800px;
+}
+
+
