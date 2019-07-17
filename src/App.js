@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 import axios from 'axios';
 import Header from './header/Header';
-import Preamble from './preamble/Preamble';
 import Content from './content/Content';
 
 function App() {
@@ -29,8 +28,7 @@ function App() {
   return (
     <div className="app">
       <Header title={photo.title} date={date} setDate={setDate} />
-      <Preamble text={photo.explanation} />
-      <Content title={photo.title} type={photo.media_type} url={photo.url} />
+      <Content title={photo.title} text={photo.explanation} type={photo.media_type} url={photo.url} />
     </div>
   );
 }

@@ -1,25 +1,14 @@
 import React from 'react';
+import Preamble from './preamble/Preamble';
+import Media from './media/Media';
 
-function Content({ title, type, url }) {
-  
-  if (type === "video") {
-    return (
-      <section>
-        <div className="content">
-          <iframe title={title} width="420" height="315" src={url}>
-          </iframe> 
-        </div>
-      </section>
-    );
-  } else {
-    return (
-      <section>
-        <div className="content">
-          <img src={url} alt={title}></img>
-        </div>
-      </section>
-    );
-  }
+function Content({ title, text, type, url }) {
+  return (
+    <section>
+        <Preamble text={text}/>
+        <Media title={title} type={type} url={url}/>
+    </section>
+  );
 }
 
 export default Content;
