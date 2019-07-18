@@ -24,11 +24,15 @@ function Header({ title, date, setDate }) {
     setDate(dateString);
   }
 
+  function disabledDate(current) {
+    return current > moment().endOf('day');
+  }
+
   return (
     <header>
       <HeaderWrapper>
         <Title>{title}</Title>
-        <StyledDatePicker defaultValue={moment(date, dateFormat)} onChange={onChange}/>
+        <StyledDatePicker disabledDate={disabledDate} defaultValue={moment(date, dateFormat)} onChange={onChange}/>
       </HeaderWrapper>
     </header>
   );
