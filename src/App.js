@@ -23,6 +23,7 @@ function App() {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin: 20px 5%;
   `;
 
   useEffect(() => {

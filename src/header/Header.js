@@ -8,9 +8,6 @@ function Header({ title, date, setDate }) {
   const { Title } = Typography;
 
   const HeaderWrapper = styled.div`
-    font-size: 1.4rem;
-    color: grey;
-    background-color: red;
     display: flex;
     flex-flow: column;
     align-items: center;
