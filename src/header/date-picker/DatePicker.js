@@ -7,13 +7,17 @@ function DatePicker({ date, setDate }) {
     text-align: center;
   `;
 
+  const DateInput = styled.input`
+    font-size: 1.4rem;
+  `;
+
   return (
     <section>
       <DatePickerWrapper>
-        <input type="date" defaultValue={date} onInput={event => {
+        <DateInput type="date" defaultValue={date} onInput={event => {
             setDate(event.target.value);
           }
-        }></input>
+        }></DateInput>
       </DatePickerWrapper>
     </section>
   );
