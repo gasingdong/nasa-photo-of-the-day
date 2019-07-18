@@ -11,6 +11,7 @@ function Header({ title, date, setDate }) {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 20px;
   `;
 
   const StyledDatePicker = styled(DatePicker)`

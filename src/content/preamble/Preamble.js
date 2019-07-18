@@ -6,6 +6,7 @@ function Preamble({ text }) {
 
   const StyledPopover = styled(Popover)`
     max-width: 200px;
+    margin-top: 20px;
   `;
 
   const ContentWrapper = styled.div`
@@ -20,8 +21,8 @@ function Preamble({ text }) {
   )
 
   return (
-    <StyledPopover content={content} trigger="click">
-      <Button>Learn More</Button>
+    <StyledPopover placement="bottom" content={content} trigger="click">
+      <Button>Details</Button>
     </StyledPopover>
   );
 }
