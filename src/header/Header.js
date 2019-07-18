@@ -1,14 +1,23 @@
 import React from 'react';
-import { DatePicker } from 'antd';
+import { Typography, DatePicker } from 'antd';
 import styled from 'styled-components';
 import moment from 'moment';
 
 function Header({ title, date, setDate }) {
 
+  const { Title } = Typography;
+
   const HeaderWrapper = styled.div`
     font-size: 1.4rem;
     color: grey;
     background-color: red;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  `;
+
+  const StyledDatePicker = styled(DatePicker)`
+    width: 20%;
   `;
 
   const dateFormat = 'YYYY-MM-DD';
@@ -20,8 +29,8 @@ function Header({ title, date, setDate }) {
   return (
     <header>
       <HeaderWrapper>
-        <h1 className="title">{title}</h1>
-        <DatePicker defaultValue={moment(date, dateFormat)} onChange={onChange}/>
+        <Title>{title}</Title>
+        <StyledDatePicker defaultValue={moment(date, dateFormat)} onChange={onChange}/>
       </HeaderWrapper>
     </header>
   );

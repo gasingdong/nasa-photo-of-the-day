@@ -5,6 +5,7 @@ import Content from './content/Content';
 import styled from 'styled-components';
 
 function App() {
+  const appTitle = "NASA Astronomy Photo of the Day";
   const apiKey = '251h2uaJvdQrHzVG2pxwAUU2SXUoX1OIPxqI7F58';
   const [cache, setCache] = useState({});
   const [date, setDate] = useState(new Date().toLocaleDateString('en-CA'));
@@ -28,7 +29,6 @@ function App() {
     if (cache[date]) {
       setPhoto(cache[date]);
     } else {
-      console.log(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`);
       axios
         .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`)
         .then(res => {
@@ -45,7 +45,7 @@ function App() {
   return (
     <AppWrapper>
       <AppInnerWrapper>
-        <Header title={photo.title} date={date} setDate={setDate} />
+        <Header title={appTitle} date={date} setDate={setDate} />
         <Content title={photo.title} text={photo.explanation} type={photo.media_type} url={photo.url} />
       </AppInnerWrapper>
     </AppWrapper>
