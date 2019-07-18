@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from './header/Header';
 import Content from './content/Content';
 import styled from 'styled-components';
+import { Card } from 'antd';
 
 function App() {
   const appTitle = "NASA Astronomy Photo of the Day";
@@ -46,8 +47,9 @@ function App() {
   return (
     <AppWrapper>
       <AppInnerWrapper>
-        <Header title={appTitle} date={date} setDate={setDate} />
-        <Content title={photo.title} text={photo.explanation} type={photo.media_type} url={photo.url} />
+        <Card title={<Header title={appTitle} date={date} setDate={setDate}/>}>
+          <Content title={photo.title} text={photo.explanation} type={photo.media_type} url={photo.url} />
+        </Card>
       </AppInnerWrapper>
     </AppWrapper>
   );
