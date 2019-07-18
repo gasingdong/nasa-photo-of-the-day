@@ -25,10 +25,10 @@ function App() {
   `;
 
   useEffect(() => {
-
     if (cache[date]) {
       setPhoto(cache[date]);
     } else {
+      console.log(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`);
       axios
         .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`)
         .then(res => {

@@ -1,6 +1,7 @@
 import React from 'react';
-import DatePicker from './date-picker/DatePicker';
+import { DatePicker } from 'antd';
 import styled from 'styled-components';
+import moment from 'moment';
 
 function Header({ title, date, setDate }) {
 
@@ -10,11 +11,17 @@ function Header({ title, date, setDate }) {
     background-color: red;
   `;
 
+  const dateFormat = 'YYYY-MM-DD';
+
+  function onChange(date, dateString) {
+    setDate(dateString);
+  }
+
   return (
     <header>
       <HeaderWrapper>
         <h1 className="title">{title}</h1>
-        <DatePicker date={date} setDate={setDate} />
+        <DatePicker defaultValue={moment(date, dateFormat)} onChange={onChange}/>
       </HeaderWrapper>
     </header>
   );
