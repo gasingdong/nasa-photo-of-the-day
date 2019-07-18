@@ -1,21 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function Media({ title, type, url }) {
-  
-  if (type === "video") {
-    return (
-      <div className="media">
-        <iframe width="500" height="300"title={title} src={url}>
-        </iframe> 
-      </div>
-    );
-  } else {
-    return (
-      <div className="media">
-        <img width="500" src={url} alt={title}></img>
-      </div>
-    );
-  }
+
+  const MediaWrapper = styled.div`
+    text-align: center;
+  `;
+
+  return (
+    <MediaWrapper>
+      {
+        type === "video" 
+        ? <iframe width="500" height="300"title={title} src={url}></iframe>
+        : <img width="500" src={url} alt={title}></img>
+      } 
+    </MediaWrapper>
+  );
 }
 
 export default Media;
